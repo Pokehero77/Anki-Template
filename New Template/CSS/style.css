@@ -1,8 +1,12 @@
-@font-face { font-family: 'Noto Sans'; src: url('_NotoSans-Regular.ttf'); }
+@font-face { 
+    font-family: 'Noto Sans'; 
+    src: url('_NotoSans-Regular.woff') format('woff'), 
+         url('_NotoSans-Regular.ttf') format('truetype'); 
+}
 
 /* Card Styles */
 .card {
-    font-family: 'Noto Sans', sans-serif;
+    font-family: 'Noto Sans', 'Roboto', 'Arial', 'Helvetica Neue', sans-serif;
     font-size: 23px; /* Adjusted size to avoid conflicts */
     text-align: center;
     margin: 20px auto; /* Center the card */
