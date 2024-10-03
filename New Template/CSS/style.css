@@ -1,21 +1,22 @@
-/* Merged CSS for Anki Cards with Noto Serif */
-
-@font-face { font-family: noto; src: url('_NotoSerifJP.otf'); }
+@font-face { font-family: 'Noto Sans'; src: url('_NotoSans-Regular.ttf'); }
 
 /* Card Styles */
 .card {
-    font-family: 'noto', serif;
+    font-family: 'Noto Sans', sans-serif;
     font-size: 23px; /* Adjusted size to avoid conflicts */
     text-align: center;
     margin: 20px auto; /* Center the card */
     padding: 0 20px;
     max-width: 800px; /* Maximum width for consistency */
+    line-height: 1.5; /* Improved readability */
 }
 
 /* Image Styles */
 img {
     max-height: 300px;
-    margin: 10px;
+    width: 100%; /* Make images responsive */
+    height: auto; /* Maintain aspect ratio */
+    margin: 10px 0; /* Adjust margin for top/bottom only */
 }
 
 /* Division Styles */
@@ -28,6 +29,11 @@ div {
 a {
     color: turquoise;
     margin: 5px;
+    transition: color 0.3s ease; /* Transition for hover effect */
+}
+
+a:hover {
+    color: #008080; /* Slightly darker color on hover */
 }
 
 /* Visibility Classes */
@@ -38,20 +44,50 @@ a {
 
 /* Kanji Popup Styles */
 .kanjipopup {
-    font-family: 'noto', serif;
+    font-family: 'Noto Sans', sans-serif;
     font-size: 20px;
     text-align: center;
 }
-.kanjipopup ruby rt { visibility: hidden; }
-.kanjipopup ruby:active rt { visibility: visible; }
-.kanjipopup ruby:hover rt { visibility: visible; }
+
+.kanjipopup ruby rt {
+    visibility: hidden;
+    transition: visibility 0s, opacity 0.2s ease-in-out; /* Transition */
+}
+
+.kanjipopup ruby:hover rt {
+    visibility: visible;
+    opacity: 1; /* Fade in effect */
+}
 
 /* Ruby Visibility */
-#word ruby rt { visibility: hidden; }
-#word ruby:hover rt { visibility: visible; }
-#word ruby rt { font-size: 20px; }
+#word ruby rt {
+    visibility: hidden;
+    transition: visibility 0s, opacity 0.2s ease-in-out; /* Transition */
+}
+
+#word ruby:hover rt {
+    visibility: visible;
+    opacity: 1; /* Fade in effect */
+}
+
+#word ruby rt {
+    font-size: 20px;
+}
 
 /* Additional Styles */
-.jp { font-family: 'noto', serif; font-size: 40px; }
-.meaning { font-family: 'noto', serif; }
-.reading { text-align: left; }
+.jp {
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 1.5em; /* Adjusted for better scaling */
+}
+
+.meaning {
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 1em; /* Standardized size */
+}
+
+.reading {
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 1em; /* Standardized size */
+    text-align: left; /* Ensures text is aligned to the left */
+    margin-top: 10px; /* Optional: adds space above */
+}
