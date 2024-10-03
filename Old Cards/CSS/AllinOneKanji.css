@@ -1,0 +1,11 @@
+.card {
+    font-family: Arial;
+    font-size: 20px;
+    text-align: center;
+    color: black;
+    background-color: white;
+}
+   
+.reading {
+    text-align: left;
+}
